@@ -20,5 +20,5 @@ Useful things for Porsche Club of America SimRacing with iRacing
   - Lenovo Legion Tower 5 - Intel Core i7-10700F (2.90 GHz) - 16GB DDR4 - 1TB HDD + 256GB SSD - NVIDIA GeForce RTX 2060 6 GB GDDR6 - Windows 10 Home
 
 ### Newbie Stuff
-- Field Of View Set-Up - https://www.youtube.com/watch?v=23PXJooAfrg&feature=emb_logo
-- Force Feedback Set-Up - https://www.youtube.com/watch?v=5v8XSEeJFnM&feature=youtu.be ; https://www.youtube.com/watch?v=PQVQhYU3ccs
+- Field Of View Set-Up - https://www.youtube.com/watch?v=23PXJooAfrg&feature=emb_logo ; https://www.youtube.com/watch?v=PQVQhYU3ccs
+- Force Feedback Set-Up - https://www.youtube.com/watch?v=5v8XSEeJFnM&feature=youtu.be
