@@ -21,4 +21,4 @@ Useful things for Porsche Club of America SimRacing with iRacing
 
 ### Newbie Stuff
 - Field Of View Set-Up - https://www.youtube.com/watch?v=23PXJooAfrg&feature=emb_logo
-- Force Feedback Set-Up - https://www.youtube.com/watch?v=5v8XSEeJFnM&feature=youtu.be
+- Force Feedback Set-Up - https://www.youtube.com/watch?v=5v8XSEeJFnM&feature=youtu.be ; https://www.youtube.com/watch?v=PQVQhYU3ccs
