@@ -16,9 +16,9 @@ Useful things for Porsche Club of America SimRacing with iRacing
 ### Cockpit
   - RSeat RSEAT N1 Black/White
   - RSeat N1 Keyboard/Mouse tray Upgrade kit White
-  - Logitech - G923 Racing Wheel and Pedals
+  - Logitech - G923 Racing Wheel and Pedals, FFB Strength 2.2Nm
   - Lenovo Legion Tower 5 - Intel Core i7-10700F (2.90 GHz) - 16GB DDR4 - 1TB HDD + 256GB SSD - NVIDIA GeForce RTX 2060 6 GB GDDR6 - Windows 10 Home
 
 ### Newbie Stuff
-- Field Of View Set-Up
-- Force Feedback Set-up
+- Field Of View Set-Up - https://www.youtube.com/watch?v=23PXJooAfrg&feature=emb_logo
+- Force Feedback Set-Up - https://www.youtube.com/watch?v=5v8XSEeJFnM&feature=youtu.be
