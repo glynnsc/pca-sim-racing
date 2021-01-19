@@ -16,7 +16,7 @@ I'm a longtime PCA member, racer and instructor, but new to iRacing so figured I
   - Sign up for our Discord server here. https://pcasimracing.com/joining-our-discord-server/
 
 
-### Cockpit
+### Cockpit - Not recommendations, this is just a list of what I started with.
   - RSeat RSEAT N1 Black/White
   - RSeat N1 Keyboard/Mouse tray Upgrade kit White
   - Logitech - G923 Racing Wheel and Pedals, FFB Strength 2.2Nm
