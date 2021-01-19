@@ -3,6 +3,8 @@ Useful things for Porsche Club of America SimRacing with iRacing
 
 ### Important iRacing Links
   - https://www.iracing.com/
+  - https://ir-core-sites.iracing.com/members/pdfs/101101.01_User_Guide.pdf
+  - https://d3bxz2vegbjddt.cloudfront.net/members/pdfs/FIRST_Sporting_Code_v2014.12.17.01.pdf
 
 ### Important PCA SimRacing Links
   - How to get started, all the information below can be found at https://pcasimracing.com/
