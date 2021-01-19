@@ -1,7 +1,7 @@
-# pca-sim-racing
-Useful things for Porsche Club of America SimRacing with iRacing.
+#PCA SimRacing
+Useful things for Porsche Club of America PCA SimRacing with iRacing.
 
-I'm a longtime PCA member, racer and instructor, but new to iRacing so figured I would keep track of the things that I found useful along the way to getting started with PCA-SimRacing.
+I'm a longtime PCA member, racer and instructor, but new to iRacing so figured I would keep track of things I found useful along the way to getting started with PCA-SimRacing.
 
 
 ### Important iRacing Links
