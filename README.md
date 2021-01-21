@@ -26,3 +26,7 @@ I'm a longtime PCA member, racer and instructor, but new to iRacing so figured I
 - Field Of View Set-Up - https://www.youtube.com/watch?v=23PXJooAfrg&feature=emb_logo ; https://www.youtube.com/watch?v=PQVQhYU3ccs
 - Force Feedback Set-Up - https://www.youtube.com/watch?v=5v8XSEeJFnM&feature=youtu.be
 - Keyboard Shortcuts - https://www.iracing.com/keyboard-shortcuts/
+
+### Data
+- Telemetry folder, ibt file, Alt-L
+- Python SDK for processing telemetry data: https://github.com/kutu/pyirsdk
