@@ -30,3 +30,4 @@ I'm a longtime PCA member, racer and instructor, but new to iRacing so figured I
 ### Data
 - Telemetry folder, ibt file, Alt-L
 - Python SDK for processing telemetry data: https://github.com/kutu/pyirsdk
+  - this sdk actually works right off the shelf.  I did some testing and can capture all iRacing parameters with just a few lines of code --- Nice!
