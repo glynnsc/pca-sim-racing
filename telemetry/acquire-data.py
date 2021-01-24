@@ -19,7 +19,7 @@ with open('output-file.csv','w') as f1:
       Lap = ir['Lap'] # Laps started count,
       LapCurrentLapTime = ir['LapCurrentLapTime'] # Estimate of players current lap time as shown in F3 box, s
       CarIdxEstTime = ir['CarIdxEstTime'] # Estimated time to reach current location on track, s
-      lapDist = ir['LapDist'] # Meters traveled from S/F this lap, m
+      LapDist = ir['LapDist'] # Meters traveled from S/F this lap, m
       LapDistPct = ir['LapDistPct'] # sames as above as percentage
       
       Speed = ir['Speed'] # GPS vehicle speed, m/s
