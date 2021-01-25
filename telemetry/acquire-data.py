@@ -1,6 +1,7 @@
 #!python3
 
 import csv
+import json
 import time
 import irsdk
 
@@ -9,7 +10,21 @@ ir.startup()
 
 ## ToDo
 # get CarSetUp
+# car_setup = ir['CarSetup']
+#    if car_setup:
+#	setup = json.dumps(ir['CarSetup']) # creates a python dict
+#        car_setup_tick = ir.get_session_info_update_by_key('CarSetup')
+#        if car_setup_tick != state.last_car_setup_tick:
+#            state.last_car_setup_tick = car_setup_tick
+#            print('car setup update count:', car_setup['UpdateCount'])
+
+# get SessionInfo
+# if ir['SessionInfo']:
+#	session = json.dumps(ir['SessionInfo'])
 # get WeekendInfo
+# if ir['WeekendInfo']:
+	weekend = json.dumps(ir['WeekendInfo'])
+#   print(ir['WeekendInfo']['TeamRacing'])
 
 #	SessionTimeOfDay = ir['SessionTimeOfDay'] # Time of day in seconds, s
 #	Skies = ir['Skies'] # Skies (0=clear/1=p cloudy/2=m cloudy/3=overcast),
