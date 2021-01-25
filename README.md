@@ -35,3 +35,4 @@ I'm a longtime PCA member, racer and instructor, but new to iRacing so figured I
 - Python SDK for processing telemetry data: https://github.com/kutu/pyirsdk
   - this sdk actually works right off the shelf.  I did some testing and can capture all iRacing parameters with just a few lines of code --- Nice!
   - Find a simple python program at [telemetry/acquire-data.py](https://github.com/glynnsc/pca-sim-racing/blob/main/telemetry/acquire-data.py) to capture real-time data and write to csv out-file.
+  - Need to checkout [Virtual Race School](https://virtualracingschool.com/) for data analysis
