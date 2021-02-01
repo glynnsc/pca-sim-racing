@@ -23,7 +23,7 @@ ir.startup()
 #	session = json.dumps(ir['SessionInfo'])
 # get WeekendInfo
 # if ir['WeekendInfo']:
-	weekend = json.dumps(ir['WeekendInfo'])
+#	weekend = json.dumps(ir['WeekendInfo'])
 #   print(ir['WeekendInfo']['TeamRacing'])
 
 #	SessionTimeOfDay = ir['SessionTimeOfDay'] # Time of day in seconds, s
