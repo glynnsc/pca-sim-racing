@@ -17,3 +17,10 @@ ir.get(1,'Lon')
 # loop thru each field and get_all()
 # add each as column to pandas data.frame
 # write pandas to csv
+
+# break out into 4 (maybe more) separate outputs according to type of data
+# SessionInfo
+# WeekendInfo
+# SessionTelemetry
+# SessionSetup
+
