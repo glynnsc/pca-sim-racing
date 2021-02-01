@@ -35,8 +35,9 @@ I'm a longtime PCA member, racer and instructor, but new to iRacing so figured I
   - Similar to FOV, it is important to understand how to set this up.  Yet the recommendations may not be right for each person.  After much testing and set up according to iRacing, uTube and others sources I ended up faster and more consistent with a much lighter force feedback than was recommended based on my setup.
   - It comes back to each of us being unique, test, test, test and find out what is right for you.  And accept that what is right for you today may change over time based on experience, equipment, game and tech updates and may just evolve over time as your driving style evolves.
 - Keyboard Shortcuts - https://www.iracing.com/keyboard-shortcuts/
- - Sound Adjustments for Racing and Comms for iRacing + Discord
-  - Adjust the app.ini file according this youtube guide, maximize tire and other noises, reduce engine noise, make sure able to hear comms over car noise.
+ - Communications & Sound
+    - Adjustments for Racing and Comms for iRacing + Discord - links TBD
+    - Adjust the app.ini file according this youtube guide, maximize tire and other noises, reduce engine noise, make sure able to hear comms over car noise.
 
 ### Data
 - Telemetry folder, ibt file, Alt-L
