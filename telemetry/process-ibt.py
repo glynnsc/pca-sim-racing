@@ -9,7 +9,7 @@ import irsdk
 ## >> use this to get fields for session, weekend, setup and telemetry 
 
 ibt = irsdk.IBT()
-ibt.open('C:\\path\\to\\file.ibt')
+ibt.open('C:\\path\\to\\file.ibt') # longterm is to provide path as cli parameter when calling an executable
 ibt.get(1,'Speed')
 ibt.var_headers_names()
 ibt.get(1,'Lat')
