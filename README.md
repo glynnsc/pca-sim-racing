@@ -8,6 +8,11 @@ I'm a longtime PCA member, racer and instructor, but new to iRacing so figured I
   - https://www.iracing.com/
   - https://ir-core-sites.iracing.com/members/pdfs/101101.01_User_Guide.pdf
   - https://d3bxz2vegbjddt.cloudfront.net/members/pdfs/FIRST_Sporting_Code_v2014.12.17.01.pdf
+  
+### Other Useful Links
+  - Good Set of reference material and insights from [EdRacing](http://www.edracing.com/edr/)
+  - YouTube Channels:
+    - TBD
 
 ### Important PCA SimRacing Links
   - How to get started, all the information below can be found at https://pcasimracing.com/
