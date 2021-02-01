@@ -27,7 +27,7 @@ ibt.get(1,'Lon')
 # for field_iterator in all_fields:
 #    this_field = all_fields[field_iterator]
 #    print(this field)
-#    df[this_field] = ir.get_all(this_field)
+#    df[this_field] = ibt.get_all(this_field)
 # df.to_csv(path/to/session-data.csv) # or could be json depending on structure and needs
 
 # break out into 4 (maybe more) separate outputs according to type of data
