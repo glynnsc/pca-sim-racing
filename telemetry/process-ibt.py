@@ -20,6 +20,16 @@ ibt.get(1,'Lon')
 # add each as column to pandas data.frame
 # write pandas to csv
 
+df = pd.DataFrame()
+all_fields = ibt.var_headers_names
+
+for field_iterator, field in enumerate(all_fields):
+    this_field = field
+    print(this_field)
+    df[this_field] = ibt.get_all(this_field)
+
+df.to_csv('path/to/output.csv')
+
 #### Pseudo-code
 # get all Fields for one of the separate sections below
 # df = pd.DataFrame()
