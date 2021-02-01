@@ -22,6 +22,7 @@ ibt.get(1,'Lon')
 
 #### Pseudo-code
 # get all Fields for one of the separate sections below
+# df = pd.DataFrame()
 # all_fields = ir_all_sessioninfo_fields # this can be done one time and written to iracing-fields.yaml
 # do this once, using pyyaml write to file, then read in yaml - this also facilitates human-readable review and augmentation
 # for field_iterator in all_fields:
