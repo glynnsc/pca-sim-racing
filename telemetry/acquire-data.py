@@ -1,5 +1,15 @@
 #!python3
 
+#############################################
+## This program acquires data directly from the 
+## iRacing application via the python irsdk()
+## and requires an active iRacing session
+##
+## To process telmetry data written to an ibt file,
+## use the process-ibt.py program, which converts
+## ibt to json records.
+#############################################
+
 import csv
 import json
 import time
