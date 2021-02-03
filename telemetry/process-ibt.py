@@ -15,6 +15,7 @@ ibt.var_headers_names()
 ibt.get(1,'Lat')
 ibt.get(1,'Lon')
 
+# for partitioning by car, track, date - need to parse the ibt filename and use the pieces as fields in data frame
 # below need get all fields
 # loop thru each field and get_all()
 # add each as column to pandas data.frame
