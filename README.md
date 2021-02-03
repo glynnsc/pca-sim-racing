@@ -1,7 +1,9 @@
 # PCA SimRacing
 Useful things for Porsche Club of America PCA SimRacing with iRacing.
 
-I'm a longtime PCA member, racer and instructor, but new to iRacing so figured I would keep track of things I found useful along the way to getting started with PCA-SimRacing.
+I'm a longtime PCA member, racer and instructor, but new to iRacing (January-2021), so figured I would capture things I found useful along the way to getting started with PCA-SimRacing.
+
+This repo is focused on the basics of PCA SimRacing with iRacing, and goes deep into details, software and methods for telemetry data analysis.
 
 
 ### Important iRacing Links
