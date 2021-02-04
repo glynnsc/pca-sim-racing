@@ -44,10 +44,10 @@ for header_iterator, value in enumerate(all_headers):
     df[this_header] = ibt.get_all(this_header)
 
 # add date, time, track, car, parsed from filename above
-df['session_time'] = time
-df['session_date'] = date
-df['track'] = track
-df['car'] = car
+df['telemetry_log_start_time'] = time
+df['telemetry_lot_date'] = date
+df['telemetry_track'] = track
+df['telemetry_car'] = car
 
 # write output in suitable json format for aws glue
 outdirectory = 'C:/Users/Glynn/Documents/play/ibt2json-data/'
