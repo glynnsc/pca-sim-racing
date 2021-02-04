@@ -45,7 +45,7 @@ for header_iterator, value in enumerate(all_headers):
 
 # add date, time, track, car, parsed from filename above
 df['telemetry_log_start_time'] = time
-df['telemetry_lot_date'] = date
+df['telemetry_log_date'] = date
 df['telemetry_track'] = track
 df['telemetry_car'] = car
 
