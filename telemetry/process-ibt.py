@@ -1,70 +1,80 @@
+import os
 import csv
 import json
 import time
+import ntpath
 import re
 import yaml
 import irsdk
+import pandas as pd
 
-# ir = irsdk.IRSDK()
-# ir.startup()
-## >> use this to get fields for session, weekend, setup and telemetry 
+#ir = irsdk.IRSDK()
+#ir.startup()
 
-ibt = irsdk.IBT()
-
-file_path = 'C:\\path\\to\\file.ibt'
-
+# process filepath to get car, track, date, time
 ## still need to extract filename from filepath
 ## then perform car, track, date, time extraction
 
-filename = 'porsche911cup_lagunaseca 2021-01-31 23-15-52.ibt'
+full_path = 'C:\\Users\\Glynn\\Documents\\iRacing\\telemetry\\porsche911cup_lagunaseca 2021-01-21 21-54-11.ibt'
+# full_path = 'C:\\Users\\Glynn\\Documents\\iRacing\\telemetry\\porsche911cup_lagunaseca 2021-01-31 23-15-52.ibt'
+filename = ntpath.basename(full_path)
+filename = re.split('\.[^\.]+$',filename)[0].replace(' ','_')
 
 # split filename by '_' to get car and a substring for track, date, time
-car_split = re.split('_',filename)
-car = car_split[0]
+filename_split = re.split('_',filename)
+car = filename_split[0]
+track = filename_split[1]
+date = filename_split[2]
+time = filename_split[3]
 
-# use the second element of car_split for track, date, time
-track_date_time_split = re.split(' ', car_split[1])
-track = track_date_time_split[0]
-date = track_date_time_split[1]
-time = re.split('\.[^\.]+$',track_date_time_split[2])[0]
+# instantiate irsdk and open file
+ibt = irsdk.IBT()
+ibt.open(full_path)
 
-# car, track, date, time are now variables to be added to the df below
-# which can then be used later for partitioning, comparisons and analytics
-
-ibt.open(file_path) # longterm is to provide path as cli parameter when calling an executable
-
-
-
-# for partitioning by car, track, date - need to parse the ibt filename and use the pieces as fields in data frame
-# below need get all fields
-# loop thru each field and get_all()
-# add each as column to pandas data.frame
-# write pandas to csv
-
+# create the dataframe
 df = pd.DataFrame()
-all_fields = ibt.var_headers_names
 
-for field_iterator, field in enumerate(all_fields):
-    this_field = field
-    print(this_field)
-    df[this_field] = ibt.get_all(this_field)
+# get all ibt headers
+all_headers = ibt.var_headers_names
 
-df.to_csv('path/to/output.csv')
+## loop over headers
+for header_iterator, value in enumerate(all_headers):
+    this_header = value
+    print(this_header)
+    df[this_header] = ibt.get_all(this_header)
 
-#### Pseudo-code
-# get all Fields for one of the separate sections below
-# df = pd.DataFrame()
-# all_fields = ir_all_sessioninfo_fields # this can be done one time and written to iracing-fields.yaml
-# do this once, using pyyaml write to file, then read in yaml - this also facilitates human-readable review and augmentation
-# for field_iterator in all_fields:
-#    this_field = all_fields[field_iterator]
-#    print(this field)
-#    df[this_field] = ibt.get_all(this_field)
-# df.to_csv(path/to/session-data.csv) # or could be json depending on structure and needs
+# add date, time, track, car, parsed from filename above
+df['session_time'] = time
+df['session_date'] = date
+df['track'] = track
+df['car'] = car
 
+# write output in suitable json format for aws glue
+outdirectory = 'C:/Users/Glynn/Documents/play/ibt2json-data/'
+outpath = os.path.join(outdirectory,str(filename+'.json'))
+ibt2json = df.to_json(orient='records').replace('[','').replace(']','').replace('},{','}\n{')
+jsonfile = open(outpath, "w")
+jsonfile.write(ibt2json)
+jsonfile.close()
+
+####################
+## END
+####################
 # break out into 4 (maybe more) separate outputs according to type of data
 # SessionInfo
 # WeekendInfo
 # SessionTelemetry
 # SessionSetup
 
+# the setup, session and weekend details are not in ibt file
+# get car setup details
+# if car_setup:
+#    setup = json.dumps(ir['CarSetup']) # creates a python dict
+
+# get session details
+# if ir['SessionInfo']:
+#    session = json.dumps(ir['SessionInfo'])
+
+# weekend details
+# if ir['WeekendInfo']:
+#    weekend = json.dumps(ir['WeekendInfo']) 
