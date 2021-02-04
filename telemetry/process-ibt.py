@@ -1,6 +1,7 @@
 import csv
 import json
 import time
+import re
 import yaml
 import irsdk
 
@@ -9,11 +10,30 @@ import irsdk
 ## >> use this to get fields for session, weekend, setup and telemetry 
 
 ibt = irsdk.IBT()
-ibt.open('C:\\path\\to\\file.ibt') # longterm is to provide path as cli parameter when calling an executable
-ibt.get(1,'Speed')
-ibt.var_headers_names()
-ibt.get(1,'Lat')
-ibt.get(1,'Lon')
+
+file_path = 'C:\\path\\to\\file.ibt'
+
+## still need to extract filename from filepath
+## then perform car, track, date, time extraction
+
+filename = 'porsche911cup_lagunaseca 2021-01-31 23-15-52.ibt'
+
+# split filename by '_' to get car and a substring for track, date, time
+car_split = re.split('_',filename)
+car = car_split[0]
+
+# use the second element of car_split for track, date, time
+track_date_time_split = re.split(' ', car_split[1])
+track = track_date_time_split[0]
+date = track_date_time_split[1]
+time = re.split('\.[^\.]+$',track_date_time_split[2])[0]
+
+# car, track, date, time are now variables to be added to the df below
+# which can then be used later for partitioning, comparisons and analytics
+
+ibt.open(file_path) # longterm is to provide path as cli parameter when calling an executable
+
+
 
 # for partitioning by car, track, date - need to parse the ibt filename and use the pieces as fields in data frame
 # below need get all fields
