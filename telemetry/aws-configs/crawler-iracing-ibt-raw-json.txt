@@ -1,0 +1,20 @@
+Name	iracing-ibt-raw-json
+Description	
+Create a single schema for each S3 path	false
+Security configuration	
+Tags	
+-
+State	Ready
+Schedule	
+Last updated	Sun Feb 07 12:40:40 GMT-500 2021
+Date created	Mon Feb 01 20:54:29 GMT-500 2021
+Database	iracing
+Service role	glue-etl-s3-athena
+Selected classifiers	
+Data store	S3
+Include path	s3://iracing-telemetry-data/telemetry-raw
+Connection	
+Exclude patterns	
+Configuration options
+Schema updates in the data store	Update the table definition in the data catalog.
+Object deletion in the data store	Mark the table as deprecated in the data catalog.
