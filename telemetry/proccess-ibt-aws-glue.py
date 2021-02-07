@@ -14,8 +14,8 @@ import pandas as pd
 #################################
 #######
 ## This part needs to be refactored to take filename from s3 file rather than hard-coded
-inpath = 's3://iracing-telemetry-data/telemetry-ibt/porsche911cup_lagunaseca 2021-01-31 23-15-52.ibt'
-outpath = 's3://iracing-telemetry-data/telemetry-raw/porsche911cup_lagunaseca 2021-01-31 23-15-52.json'
+inpath = 's3://bucket/folder/file.ibt'
+outpath = 's3://bucket/folder/file.json'
 
 filename = ntpath.basename(inpath)
 filename = re.split('\.[^\.]+$',filename)[0].replace(' ','_')
@@ -32,16 +32,16 @@ time = filename_split[3]
 print('#1')
 
 # download file to local
-# wr.s3.download(path=inpath, local_file='./porsche911cup_lagunaseca 2021-01-21 21-54-11.ibt')
+# wr.s3.download(path=inpath, local_file='./file.ibt')
 s3 = boto3.client('s3')
-s3.download_file('iracing-telemetry-data', 'telemetry-ibt/porsche911cup_lagunaseca 2021-01-31 23-15-52.ibt', 'porsche911cup_lagunaseca 2021-01-31 23-15-52.ibt')
+s3.download_file('bucket', 'folder/file.ibt', 'file.ibt')
 
 # list file
 print('#3')
 
 # instantiate irsdk and open file
 ibt = irsdk.IBT()
-ibt.open('porsche911cup_lagunaseca 2021-01-31 23-15-52.ibt')
+ibt.open('file.ibt')
 print('#4 ibt open')
 
 # create the dataframe
@@ -70,7 +70,7 @@ ibt2json = df.to_json(orient='records').replace('[','').replace(']','').replace(
 
 # write back to s3 
 s3 = boto3.resource('s3')
-s3.Object('iracing-telemetry-data', 'telemetry-raw/porsche911cup_lagunaseca 2021-01-31 23-15-52.json').put(Body=ibt2json)
+s3.Object('bucket', 'folder/file.json').put(Body=ibt2json)
 
 print('#end')
 
