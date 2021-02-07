@@ -8,15 +8,8 @@ import yaml
 import irsdk
 import pandas as pd
 
-#ir = irsdk.IRSDK()
-#ir.startup()
-
 # process filepath to get car, track, date, time
-## still need to extract filename from filepath
-## then perform car, track, date, time extraction
-
-full_path = 'C:\\Users\\Glynn\\Documents\\iRacing\\telemetry\\porsche911cup_lagunaseca 2021-01-21 21-54-11.ibt'
-# full_path = 'C:\\Users\\Glynn\\Documents\\iRacing\\telemetry\\porsche911cup_lagunaseca 2021-01-31 23-15-52.ibt'
+full_path = 'C:/Users/User/Documents/iRacing/telemetry/car track date time.ibt'
 filename = ntpath.basename(full_path)
 filename = re.split('\.[^\.]+$',filename)[0].replace(' ','_')
 
@@ -50,7 +43,7 @@ df['telemetry_track'] = track
 df['telemetry_car'] = car
 
 # write output in suitable json format for aws glue
-outdirectory = 'C:/Users/Glynn/Documents/play/ibt2json-data/'
+outdirectory = 'C:/Users/User/Documents/folder/'
 outpath = os.path.join(outdirectory,str(filename+'.json'))
 ibt2json = df.to_json(orient='records').replace('[','').replace(']','').replace('},{','}\n{')
 jsonfile = open(outpath, "w")
