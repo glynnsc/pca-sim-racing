@@ -5,9 +5,35 @@
 # is known by an AWS Glue Crawler.  The Glue
 # Crawler makes the iRacing Telemetry data 
 # available for interactive SQL analysis via AWS Athena
-# need to add Glue Job config details here:
+# AWS Glue Job config details:
+### Name	process-ibt-aws-glue
+### IAM role	glue-etl-s3-athena
+### Type	Spark
+### Glue version	2.0
+### Python version	3
+### ETL language	python
+### Script location	s3://iracing-telemetry-data/script/process-ibt-aws-glue.py
+### Temporary directory	s3://iracing-telemetry-data/temp
+### Job bookmark	Disable
+### Job metrics	Disable
+### Continuous logging	Disable
+### Server-side encryption	Disabled
+### Python lib path	s3://tentacle-python-libraries/awswrangler-2.3.0-py3-none-any.whl
+### Jar lib path
+### Other lib path
+### Job parameters	
+### --additional-python-modules boto3==1.17.3, pyarrow==2, awswrangler==2.4.0, pyirsdk==1.2.6, PyYAML==5.4.1
+### Non-overrideable Job parameters	
+### Connections	-
+### Maximum capacity	10
+### Worker type	G.1X
+### Number of workers	10
+### Job timeout (minutes)	2880
+### Delay notification threshold (minutes)
+### Tags	
 #
 ##################################
+
 import os
 import csv
 import json
