@@ -49,7 +49,7 @@ This repo is focused on the basics of PCA SimRacing with iRacing, and goes deep 
   - this sdk actually works right off the shelf.  I did some testing and can capture all iRacing parameters with just a few lines of code --- Nice!
   - Find a simple python program at [telemetry/acquire-data.py](https://github.com/glynnsc/pca-sim-racing/blob/main/telemetry/acquire-data.py) to capture real-time data and write to csv out-file.
   - Process iRacing.ibt files with [telemetry/process-ibt.py](https://github.com/glynnsc/pca-sim-racing/blob/main/telemetry/process-ibt.py) - telemetry data is written to .ibt files by keyboard `Alt-L` - ibt files contain more data including track GPS Latitutude and Longitude coordinates which are required for track map visuals and positional comparisons.
-  - Automated data pipeline in AWS using S3, Glue Job, Glue Crawler and Athena.  The iRacing.ibt files can be uploaded to an S3 bucket, processed by [telemetry/proccess-ibt-aws-glue.py](https://github.com/glynnsc/pca-sim-racing/blob/main/telemetry/proccess-ibt-aws-glue.py]) and made available for interactive analysis via Athena SQL.  
+  - Automated data pipeline in AWS using S3, Glue Job, Glue Crawler and Athena.  The iRacing.ibt files can be uploaded to an S3 bucket, processed by [telemetry/proccess-ibt-aws-glue.py](https://github.com/glynnsc/pca-sim-racing/blob/main/telemetry/proccess-ibt-aws-glue.py]) and made available for interactive analysis via Athena SQL.  To-Do - Config details for Glue ETL job and Glue Crawler - will right up a gist on this part.
   
 ### Analysis
   - Need to checkout [Virtual Race School](https://virtualracingschool.com/) for data analysis
