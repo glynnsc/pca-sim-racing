@@ -1,10 +1,12 @@
 ###################################
-# this code runs as an custom python script
+# this code runs as a custom python script
 # as part of an AWS Glue 2.0 ETL Job
 # it produces a .json file with a schema that 
 # is known by an AWS Glue Crawler.  The Glue
 # Crawler makes the iRacing Telemetry data 
 # available for interactive SQL analysis via AWS Athena
+# need to add Glue Job config details here:
+#
 ##################################
 import os
 import csv
