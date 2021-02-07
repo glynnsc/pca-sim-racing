@@ -1,3 +1,11 @@
+###################################
+# this code runs as an custom python script
+# as part of an AWS Glue 2.0 ETL Job
+# it produces a .json file with a schema that 
+# is known by an AWS Glue Crawler.  The Glue
+# Crawler makes the iRacing Telemetry data 
+# available for interactive SQL analysis via AWS Athena
+##################################
 import os
 import csv
 import json
@@ -31,25 +39,22 @@ time = filename_split[3]
 
 print('#1')
 
-# download file to local
-# wr.s3.download(path=inpath, local_file='./file.ibt')
+# download file to glue local storage
 s3 = boto3.client('s3')
 s3.download_file('bucket', 'folder/file.ibt', 'file.ibt')
-
-# list file
-print('#3')
+print('#2 file transfer successful')
 
 # instantiate irsdk and open file
 ibt = irsdk.IBT()
 ibt.open('file.ibt')
-print('#4 ibt open')
+print('#3 ibt open')
 
 # create the dataframe
 df = pd.DataFrame()
 
 # get all ibt headers
 all_headers = ibt.var_headers_names
-print('#5')
+print('#4 have headers, starting extraction...')
 
 ## loop over headers
 for header_iterator, value in enumerate(all_headers):
@@ -63,7 +68,7 @@ df['session__date'] = date
 df['sesssion__track'] = track
 df['session__car'] = car
 
-print('#6')
+print('#5 extraction complete, writing data to s3')
 
 # write output in suitable json format for aws glue crawler
 ibt2json = df.to_json(orient='records').replace('[','').replace(']','').replace('},{','}\n{')
@@ -72,7 +77,5 @@ ibt2json = df.to_json(orient='records').replace('[','').replace(']','').replace(
 s3 = boto3.resource('s3')
 s3.Object('bucket', 'folder/file.json').put(Body=ibt2json)
 
-print('#end')
-
-
-#########################################
+print('#6 write complete, job end')
+###################################
