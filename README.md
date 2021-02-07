@@ -32,7 +32,7 @@ This repo is focused on the basics of PCA SimRacing with iRacing, and goes deep 
 
 ### Newbie Stuff
 - Field Of View Set-Up - https://www.youtube.com/watch?v=23PXJooAfrg&feature=emb_logo ; https://www.youtube.com/watch?v=PQVQhYU3ccs
-  - Understanding that this can be changed and how to change it to your liking is most important.  The standard/recommendations from iRacing or Youtube or Experts may not be the right set up for each person.  This is a very individualized thing.  I ended up using a FOV setting of 75 because it feels more natural and I'm faster and more consistent.  The FOV iRacing calculation and the recommendations from uTube were 45, which I could not even drive at all.
+  - Understanding that this can be changed and how to change it to your liking is most important.  The standard/recommendations from iRacing or Youtube or Experts may not be the right set up for each person.  This is a very individualized thing.  I ended up using a FOV setting of 65 because it feels more natural and I'm faster and more consistent.  The FOV iRacing calculation and the recommendations from uTube were 45, which I could not even drive at all.
   - **Pro-Tip: this can be adjusted on the fly using keys `[` and `]`.**
   - **Pro-Tip: use `Ctrl-F12` while on grid, then choose `Cockpit` for video view.  This pops out graphics black box where many viewing, driving position and sound adjustments can be adjusted while sitting in the car on grid.** 
 - Force Feedback Set-Up - https://www.youtube.com/watch?v=5v8XSEeJFnM&feature=youtu.be
