@@ -43,7 +43,7 @@ This repo is focused on the basics of PCA SimRacing with iRacing, and goes deep 
     - Adjustments for Racing and Comms for iRacing + Discord - links TBD
     - Adjust the app.ini file according this youtube guide, maximize tire and other noises, reduce engine noise, make sure able to hear comms over car noise.
 
-### Data
+### Telemetry Data Pipeline
 - Telemetry folder, ibt file, Alt-L
 - Python SDK for processing telemetry data: https://github.com/kutu/pyirsdk
   - this sdk actually works right off the shelf.  I did some testing and can capture all iRacing parameters with just a few lines of code --- Nice!
@@ -53,3 +53,4 @@ This repo is focused on the basics of PCA SimRacing with iRacing, and goes deep 
   
 ### Analysis
   - Need to checkout [Virtual Race School](https://virtualracingschool.com/) for data analysis
+  - TBD
