@@ -6,7 +6,7 @@ import ntpath
 import re
 import os
 import irsdk
-import awswrangler as wr
+# import awswrangler as wr
 # import getpass
 import boto3
 import pandas as pd
