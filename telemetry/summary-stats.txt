@@ -1,0 +1,22 @@
+Totals:
+Laps
+Tracks
+Cars
+
+Bests:
+##
+##
+
+Dimensions:
+Session Date
+Session Time
+Track
+Track-config
+Car
+Weather
+Setup - not needed now
+
+Measures:
+Laptime, best, optimal, mean
+Speed, max, min, mean
+
