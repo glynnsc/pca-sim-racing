@@ -53,6 +53,25 @@ jsonfile.close()
 ####################
 ## END
 ####################
+
+## code to limit fields to those relevant for analysis
+# f = open('/home/glynnsc/play/lapwise/dat/ibt-headers.txt')
+# txt_file = [line.rstrip('\n') for line in f]
+i# bt_headers = pd.Series(txt_file)
+
+# analytics headers
+# analytics_filter = ibt_headers[ibt_headers.str.contains('##')].str.replace(' ##.+$','')
+# analytics_filter = analytics_filter.str.replace(' (.+)$','')
+
+# boolean list of headers in analytics
+# needs additional work, but basics are here
+# analytics_boolean = all_headers.isin(analytics_filtered)
+# analytics_headers = all_headers.loc[analytics_boolean]
+
+# since text file contains additional text, 
+# output needs to be trimmed/cleaned to match header format
+
+#############
 # break out into 4 (maybe more) separate outputs according to type of data
 # SessionInfo
 # WeekendInfo
