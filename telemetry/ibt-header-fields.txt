@@ -1,18 +1,18 @@
 sessiontime (double) !! not analytics
 sessiontick (int) !! not analytics
-sessionnum (int) !! all zero
-sessionstate (int) !! numeric code for state
-sessionuniqueid (int) !! currently singular, revisit if needed
+sessionnum (int) !! not analytics, all zero
+sessionstate (int) !! not analytics, numeric code for state
+sessionuniqueid (int) !!  not analytics,currently singular, revisit if needed
 sessionflags (int) !! not analytics
 sessiontimeremain (double) !! not analytics
 sessionlapsremain (int) !! not analytics
 sessionlapsremainex (int) !! not analytics
 sessiontimeofday (double) !! not analytics, decimal time, use session__time instead
-drivermarker (boolean) !! all false
+drivermarker (boolean) !!  not analytics,all false
 pushtopass (boolean) !! not analytics
 manualboost (boolean) !! not analytics
 manualnoboost (boolean) !! not analytics
-isontrack (boolean) ## singular, might be useful for crash, pit
+isontrack (boolean) ##  not analytics,singular, might be useful for crash, pit
 framerate (double) !! not analytics
 cpuusagebg (double) !! not analytics
 playercarposition (int) !! not analytics for testing, could be useful for pr, q, ra
