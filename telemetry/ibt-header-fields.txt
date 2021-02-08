@@ -1,237 +1,237 @@
-sessiontime (double) ! not analytics
-sessiontick (int) ! not analytics
-sessionnum (int) ! # all zero
-sessionstate (int) ! # numeric code for state
-sessionuniqueid (int) ! # singular
-sessionflags (int) ! # not analytics
-sessiontimeremain (double) ! # not analytics
-sessionlapsremain (int) ! # not analytics
-sessionlapsremainex (int) ! # not analytics
-sessiontimeofday (double) ! # decimal time, use session__time instead
-drivermarker (boolean) ! all false
-pushtopass (boolean)
-manualboost (boolean)
-manualnoboost (boolean)
-isontrack (boolean) !
-framerate (double)
-cpuusagebg (double)
-playercarposition (int)
-playercarclassposition (int)
-playertracksurface (int) !
-playertracksurfacematerial (int) !
-playercaridx (int) !
-playercarteamincidentcount (int)
-playercarmyincidentcount (int)
-playercardriverincidentcount (int)
-playercarweightpenalty (double)
-playercarpoweradjust (double)
-playercardrytiresetlimit (int)
-playercartowtime (double)
-playercarinpitstall (boolean)
-playercarpitsvstatus (int)
-playertirecompound (int) !
-pacemode (int)
-onpitroad (boolean) !
-steeringwheelangle (double) !
-throttle (double) !
-brake (double) !
-clutch (double)
-gear (int) !
-rpm (double) !
-lap (int) !
-lapcompleted (int)
-lapdist (double) !
-lapdistpct (double) !
-lapbestlap (int) !
-lapbestlaptime (double) !
-laplastlaptime (double) !
-lapcurrentlaptime (double) !
-laplasnlapseq (int) !
-laplastnlaptime (double) !
-lapbestnlaplap (int) !
-lapbestnlaptime (double) !
-lapdeltatobestlap (double) !
-lapdeltatobestlap_dd (double) !
-lapdeltatobestlap_ok (boolean) !
-lapdeltatooptimallap (double) !
-lapdeltatooptimallap_dd (double) !
-lapdeltatooptimallap_ok (boolean) !
-lapdeltatosessionbestlap (double) !
-lapdeltatosessionbestlap_dd (double) !
-lapdeltatosessionbestlap_ok (boolean) !
-lapdeltatosessionoptimallap (double) !
-lapdeltatosessionoptimallap_dd (double) !
-lapdeltatosessionoptimallap_ok (boolean) !
-lapdeltatosessionlastllap (double) !
-lapdeltatosessionlastllap_dd (double) !
-lapdeltatosessionlastllap_ok (boolean) !
-speed (double) !
-yaw (double) !
-yawnorth (double)
-pitch (double) !
-roll (double) !
-enterexitreset (int)
-lat (double) !
-lon (double) !
-alt (double) !
-tracktemp (double) !
-tracktempcrew (double)
-airtemp (double) !
-weathertype (int) !
-skies (int) !
-airdensity (double)
-airpressure (double)
-windvel (double)
-winddir (double)
-relativehumidity (double) !
-foglevel (double)
-pitsopen (boolean)
-pitrepairleft (double)
-pitoptrepairleft (double)
-pitstopactive (boolean)
-fastrepairused (int)
-fastrepairavailable (int)
-lftiresused (int)
-rftiresused (int)
-lrtiresused (int)
-rrtiresused (int)
-lefttiresetsused (int)
-righttiresetsused (int)
-fronttiresetsused (int)
-reartiresetsused (int)
-tiresetsused (int)
-lftiresavailable (int)
-rftiresavailable (int)
-lrtiresavailable (int)
-rrtiresavailable (int)
-lefttiresetsavailable (int)
-righttiresetsavailable (int)
-fronttiresetsavailable (int)
-reartiresetsavailable (int)
-tiresetsavailable (int)
-isontrackcar (boolean) !
-steeringwheelpcttorque (double) !
-steeringwheelpcttorquesign (double)
-steeringwheelpcttorquesignstops (double)
-steeringwheelpctdamper (double)
-steeringwheelanglemax (double)
-shiftindicatorpct (double)
-shiftpowerpct (double)
-shiftgrindrpm (double)
-throttleraw (double) !
-brakeraw (double) !
-handbrakeraw (double)
-enginewarnings (int)
-fuellevel (double) !
-fuellevelpct (double) !
-pitsvflags (int)
-pitsvlfp (double)
-pitsvrfp (double)
-pitsvlrp (double)
-pitsvrrp (double)
-pitsvfuel (double)
-pitsvtirecompound (int)
-tirelf_rumblepitch (double)
-tirerf_rumblepitch (double)
-tirelr_rumblepitch (double)
-tirerr_rumblepitch (double)
-steeringwheeltorque (double) !
-velocityz (double) !
-velocityy (double) !
-velocityx (double) !
-yawrate (double) !
-pitchrate (double) !
-rollrate (double) !
-vertaccel (double) !
-lataccel (double) !
-longaccel (double) !
-dcstarter (boolean)
-dcpitspeedlimitertoggle (boolean)
-dcheadlightflash (boolean)
-dprftirechange (double)
-dplftirechange (double)
-dprrtirechange (double)
-dplrtirechange (double)
-dpfuelfill (double)
-dpwindshieldtearoff (double)
-dpfueladdkg (double)
-dpfastrepair (double)
-dcbrakebias (double) !
-dplftirecoldpress (double) !
-dprftirecoldpress (double) !
-dplrtirecoldpress (double) !
-dprrtirecoldpress (double) !
-rfbrakelinepress (double)
-rfspeed (double)
-rfpressure (double)
-rfcoldpressure (double)
-rftempl (double) !
-rftempm (double) !
-rftempr (double) !
-rftempcl (double) !
-rftempcm (double) !
-rftempcr (double) !
-rfwearl (double) !
-rfwearm (double) !
-rfwearr (double) !
-lfbrakelinepress (double)
-lfspeed (double)
-lfpressure (double) !
-lfcoldpressure (double) !
-lftempl (double) !
-lftempm (double) !
-lftempr (double) !
-lftempcl (double) !
-lftempcm (double) !
-lftempcr (double) !
-lfwearl (double) !
-lfwearm (double) !
-lfwearr (double) !
-watertemp (double)
-waterlevel (double)
-fuelpress (double)
-fueluseperhour (double)
-oiltemp (double)
-oilpress (double)
-oillevel (double)
-voltage (double)
-manifoldpress (double)
-rrbrakelinepress (double)
-rrspeed (double)
-rrpressure (double) !
-rrcoldpressure (double) !
-rrtempl (double) !
-rrtempm (double) !
-rrtempr (double) !
-rrtempcl (double) !
-rrtempcm (double) !
-rrtempcr (double) !
-rrwearl (double) !
-rrwearm (double) !
-rrwearr (double) !
-lrbrakelinepress (double)
-lrspeed (double)
-lrpressure (double) !
-lrcoldpressure (double)
-lrtempl (double) !
-lrtempm (double) !
-lrtempr (double) !
-lrtempcl (double) !
-lrtempcm (double) !
-lrtempcr (double) !
-lrwearl (double) !
-lrwearm (double) !
-lrwearr (double) !
-rrshockdefl (double)
-rrshockvel (double)
-lrshockdefl (double)
-lrshockvel (double)
-rfshockdefl (double)
-rfshockvel (double)
-lfshockdefl (double)
-lfshockvel (double)
-lfrideheight (double)
-rfrideheight (double)
-lrrideheight (double)
-rrrideheight (double)
-cfsrrideheight (double)
+sessiontime (double) !! not analytics
+sessiontick (int) !! not analytics
+sessionnum (int) !! all zero
+sessionstate (int) !! numeric code for state
+sessionuniqueid (int) !! currently singular, revisit if needed
+sessionflags (int) !! not analytics
+sessiontimeremain (double) !! not analytics
+sessionlapsremain (int) !! not analytics
+sessionlapsremainex (int) !! not analytics
+sessiontimeofday (double) !! not analytics, decimal time, use session__time instead
+drivermarker (boolean) !! all false
+pushtopass (boolean) !! not analytics
+manualboost (boolean) !! not analytics
+manualnoboost (boolean) !! not analytics
+isontrack (boolean) ## singular, might be useful for crash, pit
+framerate (double) !! not analytics
+cpuusagebg (double) !! not analytics
+playercarposition (int) !! not analytics for testing, could be useful for pr, q, ra
+playercarclassposition (int) !! not analytics
+playertracksurface (int) !! not analytics
+playertracksurfacematerial (int) !! not analytics
+playercaridx (int) !! not analytics
+playercarteamincidentcount (int) ## analytics, updated dynamically
+playercarmyincidentcount (int) ## analytics, updated dynamically
+playercardriverincidentcount (int) ## analytics, updated dynamically
+playercarweightpenalty (double) !! not analytics
+playercarpoweradjust (double) !! not analytics
+playercardrytiresetlimit (int) !! not analytics
+playercartowtime (double) !! not analytics
+playercarinpitstall (boolean) ## analytics - might be useful to exclude car in pit
+playercarpitsvstatus (int) !! not analytics
+playertirecompound (int) !! not analytics
+pacemode (int) !! not analytics
+onpitroad (boolean) ## analytics - might be useful to exclude car in pit
+steeringwheelangle (double) ## analytics - need clarity on range
+throttle (double) ## analytics
+brake (double) ## analytics
+clutch (double) ## analytics
+gear (int) ## analytics
+rpm (double) ## analytics
+lap (int) ## analytics
+lapcompleted (int) ## analytics
+lapdist (double) ## analytics - meters
+lapdistpct (double) ## analytics - [0,1]
+lapbestlap (int) ## analytics
+lapbestlaptime (double) ## analytics
+laplastlaptime (double) ## analytics
+lapcurrentlaptime (double) ## analytics
+laplasnlapseq (int) !! not analytics, singular all zero
+laplastnlaptime (double) !! not analytics, singular all zero
+lapbestnlaplap (int) !! not analytics, singular all zero
+lapbestnlaptime (double) !! not analytics, singular all zero
+lapdeltatobestlap (double) ## analytics
+lapdeltatobestlap_dd (double) ## analytics, Rate of change of delta time for best lap, s/s
+lapdeltatobestlap_ok (boolean) !! not analytics, Delta time for best lap is valid,
+lapdeltatooptimallap (double) ## analytics
+lapdeltatooptimallap_dd (double) ## analytics, Rate of change of delta time for optimal lap, s/s
+lapdeltatooptimallap_ok (boolean) !! not analytics, Delta time for optimal lap is valid
+lapdeltatosessionbestlap (double) ## analytics
+lapdeltatosessionbestlap_dd (double) ## analytics, Rate of change of delta time for session lap, s/s
+lapdeltatosessionbestlap_ok (boolean) !! not analytics, Delta time for session lap is valid
+lapdeltatosessionoptimallap (double) ## analytics
+lapdeltatosessionoptimallap_dd (double) ## analytics, Rate of change of delta time for session optimal, s/s
+lapdeltatosessionoptimallap_ok (boolean) !! not analytics, Delta time for optimal lap is valid
+lapdeltatosessionlastllap (double) ## analytics
+lapdeltatosessionlastllap_dd (double) ## analytics, Rate of change of delta time for last, s/s
+lapdeltatosessionlastllap_ok (boolean) !! not analytics , Delta time for last lap is valid
+speed (double) ## analytics, GPS vehicle speed, m/s
+yaw (double) ## analytics
+yawnorth (double) !! not analytics
+pitch (double) ## analytics
+roll (double) ## analytics
+enterexitreset (int) !! not analytics
+lat (double) ## analytics
+lon (double) ## analytics
+alt (double) ## analytics
+tracktemp (double) Deprecated  set to TrackTempCrew, C
+tracktempcrew (double) ## analytics, TrackTempCrew, C
+airtemp (double) ## analytics
+weathertype (int) ## analytics
+skies (int) ## analytics
+airdensity (double) ## analytics
+airpressure (double) ## analytics
+windvel (double) ## analytics
+winddir (double) ## analytics
+relativehumidity (double) ## analytics
+foglevel (double) ## analytics
+pitsopen (boolean) !! not analytics
+pitrepairleft (double) !! not analytics
+pitoptrepairleft (double) !! not analytics
+pitstopactive (boolean) !! not analytics
+fastrepairused (int) !! not analytics
+fastrepairavailable (int) !! not analytics
+lftiresused (int) !! not analytics
+rftiresused (int) !! not analytics
+lrtiresused (int) !! not analytics
+rrtiresused (int) !! not analytics
+lefttiresetsused (int) !! not analytics
+righttiresetsused (int) !! not analytics
+fronttiresetsused (int) !! not analytics
+reartiresetsused (int) !! not analytics
+tiresetsused (int) !! not analytics
+lftiresavailable (int) !! not analytics
+rftiresavailable (int) !! not analytics
+lrtiresavailable (int) !! not analytics
+rrtiresavailable (int) !! not analytics
+lefttiresetsavailable (int) !! not analytics
+righttiresetsavailable (int) !! not analytics
+fronttiresetsavailable (int) !! not analytics
+reartiresetsavailable (int) !! not analytics
+tiresetsavailable (int) !! not analytics
+isontrackcar (boolean) !! not analytics
+steeringwheelpcttorque (double) !! not analytics
+steeringwheelpcttorquesign (double) !! not analytics
+steeringwheelpcttorquesignstops (double) !! not analytics
+steeringwheelpctdamper (double) !! not analytics
+steeringwheelanglemax (double) !! not analytics
+shiftindicatorpct (double) !! not analytics
+shiftpowerpct (double) !! not analytics
+shiftgrindrpm (double) !! not analytics
+throttleraw (double) ## analytics
+brakeraw (double) ## analytics
+handbrakeraw (double) !! not analytics
+enginewarnings (int) !! not analytics
+fuellevel (double) ## analytics
+fuellevelpct (double) ## analytics
+pitsvflags (int) !! not analytics
+pitsvlfp (double) !! not analytics
+pitsvrfp (double) !! not analytics
+pitsvlrp (double) !! not analytics
+pitsvrrp (double) !! not analytics
+pitsvfuel (double) !! not analytics
+pitsvtirecompound (int) !! not analytics
+tirelf_rumblepitch (double) !! not analytics
+tirerf_rumblepitch (double) !! not analytics
+tirelr_rumblepitch (double) !! not analytics
+tirerr_rumblepitch (double) !! not analytics
+steeringwheeltorque (double) !! not analytics
+velocityz (double) ## analytics
+velocityy (double) ## analytics
+velocityx (double) ## analytics  X velocity, m/s
+yawrate (double) ## analytics
+pitchrate (double) ## analytics
+rollrate (double) ## analytics
+vertaccel (double) ## analytics
+lataccel (double) ## analytics
+longaccel (double) ## analytics
+dcstarter (boolean) !! not analytics
+dcpitspeedlimitertoggle (boolean) !! not analytics
+dcheadlightflash (boolean) !! not analytics
+dprftirechange (double) !! not analytics
+dplftirechange (double) !! not analytics
+dprrtirechange (double) !! not analytics
+dplrtirechange (double) !! not analytics
+dpfuelfill (double) !! not analytics
+dpwindshieldtearoff (double) !! not analytics
+dpfueladdkg (double) !! not analytics
+dpfastrepair (double) !! not analytics
+dcbrakebias (double)  ## analytics, setup
+dplftirecoldpress (double)  ## analytics, setup
+dprftirecoldpress (double)  ## analytics, setup
+dplrtirecoldpress (double)  ## analytics, setup
+dprrtirecoldpress (double)  ## analytics, setup
+rfbrakelinepress (double) !! not analytics
+rfspeed (double) !! not analytics
+rfpressure (double)  ## analytics, setup
+rfcoldpressure (double)  ## analytics, setup - tire cold pressure  as set in the garage, kPa
+rftempl (double) ## analytics- tire left temperature, C
+rftempm (double) ## analytics- tire middle temperature, C
+rftempr (double) ## analytics- tire right temperature, C
+rftempcl (double) ## analytics- tire left carcass temperature, C
+rftempcm (double) ## analytics- tire middle carcass temperature, C
+rftempcr (double) ## analytics- tire right carcass temperature, C
+rfwearl (double) ## analytics- tire left percent tread remaining, %
+rfwearm (double) ## analytics- tire middle percent tread remaining, %
+rfwearr (double) ## analytics- tire rigth percent tread remaining, %
+lfbrakelinepress (double) !! not analytics
+lfspeed (double) !! not analytics
+lfpressure (double)  ## analytics, setup
+lfcoldpressure (double)  ## analytics, setup - tire cold pressure  as set in the garage, kPa
+lftempl (double) ## analytics
+lftempm (double) ## analytics
+lftempr (double) ## analytics
+lftempcl (double) ## analytics
+lftempcm (double) ## analytics
+lftempcr (double) ## analytics
+lfwearl (double) ## analytics
+lfwearm (double) ## analytics
+lfwearr (double) ## analytics
+watertemp (double) !! not analytics
+waterlevel (double) !! not analytics
+fuelpress (double) !! not analytics
+fueluseperhour (double) ## analytics
+oiltemp (double) !! not analytics
+oilpress (double) !! not analytics
+oillevel (double) !! not analytics
+voltage (double) !! not analytics
+manifoldpress (double) !! not analytics
+rrbrakelinepress (double) !! not analytics
+rrspeed (double) !! not analytics
+rrpressure (double) ## analytics
+rrcoldpressure (double) ## analytics
+rrtempl (double) ## analytics
+rrtempm (double) ## analytics
+rrtempr (double) ## analytics
+rrtempcl (double) ## analytics
+rrtempcm (double) ## analytics
+rrtempcr (double) ## analytics
+rrwearl (double) ## analytics
+rrwearm (double) ## analytics
+rrwearr (double) ## analytics
+lrbrakelinepress (double) !! not analytics
+lrspeed (double) !! not analytics
+lrpressure (double) ## analytics
+lrcoldpressure (double) ## analytics
+lrtempl (double) ## analytics
+lrtempm (double) ## analytics
+lrtempr (double) ## analytics
+lrtempcl (double) ## analytics
+lrtempcm (double) ## analytics
+lrtempcr (double) ## analytics
+lrwearl (double) ## analytics
+lrwearm (double) ## analytics
+lrwearr (double) ## analytics
+rrshockdefl (double) ## analytics
+rrshockvel (double) ## analytics
+lrshockdefl (double) ## analytics
+lrshockvel (double) ## analytics
+rfshockdefl (double) ## analytics
+rfshockvel (double) ## analytics
+lfshockdefl (double) ## analytics
+lfshockvel (double) ## analytics
+lfrideheight (double) ## analytics
+rfrideheight (double) ## analytics
+lrrideheight (double) ## analytics
+rrrideheight (double) ## analytics
+cfsrrideheight (double) ## analytics
