@@ -1,14 +1,14 @@
-sessiontime (double) !
-sessiontick (int) !
-sessionnum (int) !
-sessionstate (int) !
-sessionuniqueid (int) !
-sessionflags (int)
-sessiontimeremain (double)
-sessionlapsremain (int)
-sessionlapsremainex (int)
-sessiontimeofday (double) !
-drivermarker (boolean)
+sessiontime (double) ! not analytics
+sessiontick (int) ! not analytics
+sessionnum (int) ! # all zero
+sessionstate (int) ! # numeric code for state
+sessionuniqueid (int) ! # singular
+sessionflags (int) ! # not analytics
+sessiontimeremain (double) ! # not analytics
+sessionlapsremain (int) ! # not analytics
+sessionlapsremainex (int) ! # not analytics
+sessiontimeofday (double) ! # decimal time, use session__time instead
+drivermarker (boolean) ! all false
 pushtopass (boolean)
 manualboost (boolean)
 manualnoboost (boolean)
