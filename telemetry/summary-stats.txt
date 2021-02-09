@@ -1,12 +1,19 @@
-Totals:
+Totals: Done in Athena View
 Laps
 Tracks
 Cars
 Seat Time Hours
 
-Bests & Trends:
-Laps this week
-New best this week
+Bests: Done in Athena View
+Best Lap
+Average lap
+Worst Lap
+Standard Deviation of laptime
+Coefficient of Variation laptime
+grouped by car,track
+
+Trends:
+# this will come later
 
 Dimensions:  
 Session Date
