@@ -12,13 +12,13 @@
 ### Glue version	2.0
 ### Python version	3
 ### ETL language	python
-### Script location	s3://iracing-telemetry-data/script/process-ibt-aws-glue.py
-### Temporary directory	s3://iracing-telemetry-data/temp
+### Script location	s3://bucket/script/process-ibt-aws-glue.py
+### Temporary directory	s3://bucket/temp
 ### Job bookmark	Disable
 ### Job metrics	Disable
 ### Continuous logging	Disable
 ### Server-side encryption	Disabled
-### Python lib path	s3://tentacle-python-libraries/awswrangler-2.3.0-py3-none-any.whl
+### Python lib path	s3://bucket/awswrangler-2.3.0-py3-none-any.whl
 ### Jar lib path
 ### Other lib path
 ### Job parameters	
