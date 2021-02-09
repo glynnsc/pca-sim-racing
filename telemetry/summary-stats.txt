@@ -2,12 +2,13 @@ Totals:
 Laps
 Tracks
 Cars
+Seat Time Hours
 
-Bests:
-##
-##
+Bests & Trends:
+Laps this week
+New best this week
 
-Dimensions:
+Dimensions:  
 Session Date
 Session Time
 Track
