@@ -1,0 +1,25 @@
+# update conda and setup env
+conda update conda
+mkdir iracing-telemetry-dash-dev
+cd iracing*
+conda create --name iracing-mvp  python=3.8                                               
+conda info --envs
+conda activate iracing-mvp
+
+# install packages
+conda install awswrangler==1.10.0 # this installs pandas 1.1.5
+conda install numpy # installed by awswranger
+conda install dash==1.19.0 # this installs plotly 
+# conda install dash-bootstrap-components 
+# conda install dash-core-components # installed by dash
+# conda install dash-html-components  # installed by dash
+# conda install dash-renderer  # installed by dash
+# conda install dash-table  # installed by dash
+# conda install pandas  # installed by awswranger
+# conda install plotly # because dash installs plotly, then this is not needed
+
+
+
+conda env export -f environment.yml
+
+git clone https://github.com/glynnsc/pca-sim-racing.git
