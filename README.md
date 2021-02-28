@@ -53,4 +53,4 @@ This repo is focused on the basics of PCA SimRacing with iRacing, and goes deep 
   
 ### Analysis
   - Need to checkout [Virtual Race School](https://virtualracingschool.com/) for data analysis
-  - TBD
+  - Session Telemetry Analysis Jupyter Notebook [iracing-telemetry-methods-dev1](https://github.com/glynnsc/pca-sim-racing/blob/main/telemetry/iracing-telemetry-methods-dev1.ipynb)
