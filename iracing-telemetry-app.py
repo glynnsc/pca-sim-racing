@@ -144,7 +144,7 @@ row_2 = dbc.Row(
 
 ####
 app.layout = html.Div(children=[
-    html.Nav(children='SimRacing',style={'backgroundColor':'#4a494a'}),
+    html.Nav(children='SimRacing',style={'height': '50px', 'backgroundColor':'#483D8B'}),
     html.Hr(),
     html.Div([row_1]),
     html.Br(),
