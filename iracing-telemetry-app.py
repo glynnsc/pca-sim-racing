@@ -20,17 +20,6 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.SLATE])
 
 #### Overall Stats for Cards
 total_stats = helpers.getTelemetrySummaryStatsTotals()
-trackcarlap_stats = helpers.getTrackCarLapSummaryStats()
-trackcarlap_stats.rename(columns={
-    "sesssion__track": "Track", "session__car": "Car",
-    "minlap": "Min","avglap": "Average",
-    "maxlap": "Max","stdevlap": "Variance","covlap": "Consistency"
-    },inplace=True)
-
-trackcarlap_stats = trackcarlap_stats.round({'Min': 4, 'Average': 4, 
-'Max': 4, 'Variance': 4, 'Consistency': 4})
-
-
 total_cars = total_stats['total'][total_stats['category']=='cars'].values[0]
 total_tracks = total_stats['total'][total_stats['category']=='tracks'].values[0]
 total_days = total_stats['total'][total_stats['category']=='days'].values[0]
@@ -38,6 +27,18 @@ total_sessions = total_stats['total'][total_stats['category']=='sessionstarts'].
 total_hours = total_stats['total'][total_stats['category']=='seat_time'].values[0]
 total_laps = total_stats['total'][total_stats['category']=='laps'].values[0]
 total_incidents = 337 # get this when the total_stats query is refactored
+
+trackcarlap_stats = helpers.getTrackCarLapSummaryStats()
+trackcarlap_stats.rename(columns={
+    "sesssion__track": "Track", "session__car": "Car",
+    "minlap": "Min","avglap": "Average",
+    "maxlap": "Max","stdevlap": "Variance","covlap": "Consistency"
+    },inplace=True)
+trackcarlap_stats = trackcarlap_stats.round({'Min': 4, 'Average': 4, 
+'Max': 4, 'Variance': 4, 'Consistency': 4})
+
+lapcount_by_date = helpers.getLapCountbyDate()
+lapcount_fig = px.bar(lapcount_by_date, x='session__date', y='Lap_Count', title='Lap Activity')
 
 
 cars_card = [
@@ -135,13 +136,17 @@ app.layout = html.Div(children=[
     html.Div([row_1]),
     html.Br(),
     html.Div([row_2]),
+    html.Div([
+        dcc.Graph(figure=lapcount_fig)
+        ]),
+    html.Div([
     dash_table.DataTable(
     id='table',
     columns=[{"name": i, "id": i} for i in trackcarlap_stats.columns],
     data=trackcarlap_stats.to_dict('records'),
     style_cell=dict(textAlign='left'),
     style_header=dict(backgroundColor="paleturquoise"),
-    )
+    )])
     ])
     
 if __name__ == '__main__':

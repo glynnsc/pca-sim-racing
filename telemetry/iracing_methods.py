@@ -6,6 +6,15 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
+def getLapCountbyDate():
+    sel = "select session__date, count(distinct lap) as Lap_Count \
+    from telemetry_raw \
+    group by session__date order by session__date"
+    
+    df = wr.athena.read_sql_query(sel, database='iracing', ctas_approach=False)
+    
+    return df
+
 def getTelemetrySummaryStatsTotals():
     sel = "select * from telemetry_summary_stats_totals"
     df = wr.athena.read_sql_query(sel, database='iracing', ctas_approach=False)
