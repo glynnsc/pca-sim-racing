@@ -1,6 +1,3 @@
-"""
-methods
-"""
 
 import awswrangler as wr
 import pandas as pd
@@ -11,6 +8,13 @@ from plotly.subplots import make_subplots
 
 def getTelemetrySummaryStatsTotals():
     sel = "select * from telemetry_summary_stats_totals"
+    df = wr.athena.read_sql_query(sel, database='iracing', ctas_approach=False)
+    
+    return df
+
+
+def getTrackCarLapSummaryStats():
+    sel = "select * from telemetry_best_avg_laptimes"
     df = wr.athena.read_sql_query(sel, database='iracing', ctas_approach=False)
     
     return df

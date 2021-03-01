@@ -6,6 +6,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import dash
+import dash_table
 import dash_core_components as dcc
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output, State
@@ -19,6 +20,16 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.SLATE])
 
 #### Overall Stats for Cards
 total_stats = helpers.getTelemetrySummaryStatsTotals()
+trackcarlap_stats = helpers.getTrackCarLapSummaryStats()
+trackcarlap_stats.rename(columns={
+    "sesssion__track": "Track", "session__car": "Car",
+    "minlap": "Min","avglap": "Average",
+    "maxlap": "Max","stdevlap": "Variance","covlap": "Consistency"
+    },inplace=True)
+
+trackcarlap_stats = trackcarlap_stats.round({'Min': 4, 'Average': 4, 
+'Max': 4, 'Variance': 4, 'Consistency': 4})
+
 
 total_cars = total_stats['total'][total_stats['category']=='cars'].values[0]
 total_tracks = total_stats['total'][total_stats['category']=='tracks'].values[0]
@@ -124,7 +135,14 @@ app.layout = html.Div(children=[
     html.Div([row_1]),
     html.Br(),
     html.Div([row_2]),
-])
+    dash_table.DataTable(
+    id='table',
+    columns=[{"name": i, "id": i} for i in trackcarlap_stats.columns],
+    data=trackcarlap_stats.to_dict('records'),
+    style_cell=dict(textAlign='left'),
+    style_header=dict(backgroundColor="paleturquoise"),
+    )
+    ])
     
 if __name__ == '__main__':
     app.run_server(debug=True)
