@@ -4,13 +4,17 @@ methods
 
 import awswrangler as wr
 import pandas as pd
-import geopy.distance as geo
 import numpy as np
-#import calmap
-import calplot
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+
+def getTelemetrySummaryStatsTotals():
+    sel = "select * from telemetry_summary_stats_totals"
+    df = wr.athena.read_sql_query(sel, database='iracing', ctas_approach=False)
+    
+    return df
+
 
 def getiRacingTelemetryData(session_track, session_car, session_date):
     sel = "select lap, lapdist, lapdistpct, \
