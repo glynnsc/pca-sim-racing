@@ -1,8 +1,4 @@
-
-#import sys
-#sys.path.append("./telemetry")
 from telemetry import iracing_methods as helpers
-# import iracing_methods
 import awswrangler as wr
 import pandas as pd
 import numpy as np
@@ -14,20 +10,12 @@ import dash_core_components as dcc
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output, State
 import dash_html_components as html
+
 #PLOTLY_LOGO = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
 #PLOTLY_LOGO = "http://pngimg.com/uploads/octopus/octopus_PNG31.png"
-
-#external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 external_stylesheets = ['https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css']
-#app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-#app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.SLATE])
 
-# def getTelemetrySummaryStatsTotals():
-#     sel = "select * from telemetry_summary_stats_totals"
-#     df = wr.athena.read_sql_query(sel, database='iracing', ctas_approach=False)
-    
-#     return df
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.SLATE])
 
 #### Overall Stats for Cards
 total_stats = helpers.getTelemetrySummaryStatsTotals()
@@ -75,8 +63,7 @@ activity_card = [
             html.H5("Days: " + str(total_days) +
             "  Sessions: " + str(total_sessions),
             className="card-title"),
-          #  html.H5("Sessions: " + str(total_sessions), className="card-title"),
-        ]
+            ]
     ),
 ]
 
@@ -88,15 +75,6 @@ hours_card = [
         ]
     ),
 ]
-
-# sessions_card = [
-#     dbc.CardHeader("Tracks"),
-#     dbc.CardBody(
-#         [
-#             html.H5(str(total_sessions), className="card-title"),
-#         ]
-#     ),
-# ]
 
 incidents_card = [
     dbc.CardHeader("Incidents"),
@@ -139,64 +117,14 @@ row_2 = dbc.Row(
      className="mb-4",
  )
 
-#### Construct cards for graphs
-#### also look at plotly indicators
-
-####
+#### Layout the dashboard
 app.layout = html.Div(children=[
     html.Nav(children='SimRacing',style={'height': '50px', 'backgroundColor':'#483D8B'}),
     html.Hr(),
     html.Div([row_1]),
     html.Br(),
     html.Div([row_2]),
-#     html.Div([
-#         dcc.Graph(
-#             id='speed-graph',
-#             figure=speed_fig
-#           ),
-            
-#         dcc.Graph(
-#             id='duration-graph',
-#             figure=duration_fig
-#         )],
-#         style={'width':'49%', 'height':'100px','float':'left', 'display':'inline-block'}
-#     ),
-#   generate_table(stats_df)
 ])
     
 if __name__ == '__main__':
     app.run_server(debug=True)
-
-#### Construct Dahsboard Cards 
-# cars_card = [
-#     dbc.CardHeader("Cars"),
-#     dbc.CardBody(
-#         [
-#             html.H5("Total: "+ str(distance_total) + " Miles", className="card-title"),
-#             html.H5("Average: "+ str(distance_average) + " Miles", className="card-title"),
-#         ]
-#     ),
-# ]
-
-# duration_card = [
-#     dbc.CardHeader("Tracks"),
-#     dbc.CardBody(
-#         [
-#             html.H5("Total: " + str(duration_total) + " Minutes", className="card-title"),
-#             html.H5("Average: "+ str(duration_average) + " Minutes", className="card-title"),
-#         ]
-#     ),
-# ]
-
-
-# putting fig in a card
-# speed_card_fig = [
-#     dbc.CardBody(
-#             [
-#                 dcc.Graph(
-#                     id='speed_card_fig_id',
-#                     figure=speed_fig
-#                 )
-#             ]
-#         )
-#     ]
