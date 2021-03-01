@@ -35,8 +35,11 @@ total_stats = helpers.getTelemetrySummaryStatsTotals()
 total_cars = total_stats['total'][total_stats['category']=='cars'].values[0]
 total_tracks = total_stats['total'][total_stats['category']=='tracks'].values[0]
 total_days = total_stats['total'][total_stats['category']=='days'].values[0]
+total_sessions = total_stats['total'][total_stats['category']=='sessionstarts'].values[0]
+total_hours = total_stats['total'][total_stats['category']=='seat_time'].values[0]
 total_laps = total_stats['total'][total_stats['category']=='laps'].values[0]
-total_hours = total_stats['total'][total_stats['category']=='seat_time'].values[0]     
+total_incidents = 337 # get this when the total_stats query is refactored
+
 
 cars_card = [
     dbc.CardHeader("Cars"),
@@ -52,6 +55,54 @@ tracks_card = [
     dbc.CardBody(
         [
             html.H5(str(total_tracks), className="card-title"),
+        ]
+    ),
+]
+
+laps_card = [
+    dbc.CardHeader("Laps"),
+    dbc.CardBody(
+        [
+            html.H5(str(total_laps), className="card-title"),
+        ]
+    ),
+]
+
+activity_card = [
+    dbc.CardHeader("Activity"),
+    dbc.CardBody(
+        [
+            html.H5("Days: " + str(total_days) +
+            "  Sessions: " + str(total_sessions),
+            className="card-title"),
+          #  html.H5("Sessions: " + str(total_sessions), className="card-title"),
+        ]
+    ),
+]
+
+hours_card = [
+    dbc.CardHeader("Seat Time"),
+    dbc.CardBody(
+        [
+            html.H5(str(round(total_hours/60,2)), className="card-title"),
+        ]
+    ),
+]
+
+# sessions_card = [
+#     dbc.CardHeader("Tracks"),
+#     dbc.CardBody(
+#         [
+#             html.H5(str(total_sessions), className="card-title"),
+#         ]
+#     ),
+# ]
+
+incidents_card = [
+    dbc.CardHeader("Incidents"),
+    dbc.CardBody(
+        [
+            html.H5(str(total_incidents), className="card-title"),
         ]
     ),
 ]
@@ -72,21 +123,21 @@ tracks_card = [
 row_1 = dbc.Row(
      [
          dbc.Col(dbc.Card(cars_card, color="dark", inverse=True)),
-         dbc.Col(dbc.Card(tracks_card, color="dark", inverse=True))
-#         dbc.Col(dbc.Card(speed_card, color="dark", inverse=True)),
-#         dbc.Col(dbc.Card(climb_card, color="dark", inverse=True)),
+         dbc.Col(dbc.Card(tracks_card, color="dark", inverse=True)),
+         dbc.Col(dbc.Card(laps_card, color="dark", inverse=True))
      ],
      className="mb-4",
 )
-# row_2 = dbc.Row(
-#     [
-#         dbc.Col(dbc.Card(distance_card_fig, color="dark")),
-#         dbc.Col(dbc.Card(speed_card_fig, color="dark", inverse=True)),
-#         #dbc.Col(dbc.Card(duration_card_fig, color="dark")),
+
+row_2 = dbc.Row(
+     [
+         dbc.Col(dbc.Card(activity_card, color="dark",inverse=True)),
+         dbc.Col(dbc.Card(hours_card, color="dark", inverse=True)),
+         dbc.Col(dbc.Card(incidents_card, color="dark", inverse=True))
         
-#     ],
-#     className="mb-4",
-# )
+     ],
+     className="mb-4",
+ )
 
 #### Construct cards for graphs
 #### also look at plotly indicators
@@ -97,7 +148,7 @@ app.layout = html.Div(children=[
     html.Hr(),
     html.Div([row_1]),
     html.Br(),
-#     html.Div([row_2]),
+    html.Div([row_2]),
 #     html.Div([
 #         dcc.Graph(
 #             id='speed-graph',
