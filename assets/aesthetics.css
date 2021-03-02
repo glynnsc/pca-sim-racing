@@ -1,0 +1,40 @@
+.horizontal-outer {
+  text-align:center;
+  float:center
+}
+
+.connect-circle {
+  display:inline-block;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  background: #33cc33
+}
+
+.drive-circle {
+  display:inline-block;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  background: #ff4000
+}
+
+.data-circle {
+  display:inline-block;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  background: #8000ff
+}
