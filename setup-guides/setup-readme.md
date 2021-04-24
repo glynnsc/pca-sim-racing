@@ -1,4 +1,24 @@
-### Terminology
+# First Things First
+Finding a setup that is fast, predictable and instills driver confidence is a multi-dimensional optimization problem with many related and dynamic variables.
+Setup is not one-size-fits all.  It depends on track type, track surface, car, tire, weather condition, and not least of all, driving style and experience.  Finding the right setup for the track, car, conditions and driving style is continuous search of trial-and-error.  Having a strategy, or playbook, that guides you through the setup process is essential.  ....  . Below is a strategic and data-driven playbook that makes finding the right set-up efficient and reproducible. 
+
+# Golden Rules
+- Tire patch and Tire temperature are king (priority #1)
+- Change one thing at a time
+- Make set-up decisions on average laptime, not best laptime
+
+# Other Must Haves
+- Take a scientific approach (experiment, measure, decide)
+- Take notes
+- Tire patch and temp priority #1
+- Change one thing at a time
+- Changes should be small and incremental
+- Drive consistently (within 0.5 second variation per lap)
+- Minimum 5 lap test per change
+- Make set-up decisions on average laptime, not best laptime
+- 
+
+
 Have a strategy for testing and developing a setup.
 Considerations:
 Driving Style
