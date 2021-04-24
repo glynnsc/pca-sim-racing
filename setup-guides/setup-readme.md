@@ -22,10 +22,12 @@ Setup is not one-size-fits all.  It depends on track type, track surface, car, t
 - Track Surface (High vs Low Grip)
 - Conditions & Time of Day
 
-# Setup should optimize the following:
-Maximize confidence based no driving style
-Maximize consistency and precision in most important sectors and corners
-Minimize average laptime
+# Setup Goals:
+- Minimize average laptime
+- Minimize laptime variance
+- Maximize confidence based no driving style
+- Maximize consistency and precision in most important sectors and corners
+
 
 # Focus Areas for Set-Up Changes:
 
