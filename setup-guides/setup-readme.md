@@ -2,38 +2,35 @@
 Finding a setup that is fast, predictable and instills driver confidence is a multi-dimensional optimization problem with many related and dynamic variables.
 Setup is not one-size-fits all.  It depends on track type, track surface, car, tire, weather condition, and not least of all, driving style and experience.  Finding the right setup for the track, car, conditions and driving style is continuous search of trial-and-error.  Having a strategy, or playbook, that guides you through the setup process is essential.  ....  . Below is a strategic and data-driven playbook that makes finding the right set-up efficient and reproducible. 
 
-# Golden Rules
-- Tire patch and Tire temperature are king (priority #1)
-- Change one thing at a time
-- Make set-up decisions on average laptime, not best laptime
+# Top Priorities
+- Priority #1 - Tire patch and Tire temperature are king
+- Priority #2 - Consistently (within 0.5s).  If you're not in this range don't mess with setup
+- Priority #3 - Change one thing at a time
 
-# Other Must Haves
-- Take a scientific approach (experiment, measure, decide)
-- Take notes
-- Tire patch and temp priority #1
-- Change one thing at a time
+# Stay Disciplined
+- Take a scientific approach (experiment, measure, record, decide)
+- Take notes on each setup and record laptimes and telemetry
 - Changes should be small and incremental
-- Drive consistently (within 0.5 second variation per lap)
-- Minimum 5 lap test per change
-- Make set-up decisions on average laptime, not best laptime
-- 
+- 5 lap minimum per change
+- Don't make setup decisions based on the one best lap
+- Make set-up decisions on average laptime, low variability in laptime and driver confidence
 
+# A playbook for testing and developing a setup.
+- Things to think about the should influence setup decisions
+- Driving Style
+- Track Style (Fast vs slow corners, most important sectors)
+- Track Surface (High vs Low Grip)
+- Conditions & Time of Day
 
-Have a strategy for testing and developing a setup.
-Considerations:
-Driving Style
-Track Style (Fast vs slow corners, most important sectors)
-Track Surface (High vs Low Grip)
-Conditions & Time of Day
-
-Setup should optimize the following:
+# Setup should optimize the following:
 Maximize confidence based no driving style
 Maximize consistency and precision in most important sectors and corners
 Minimize average laptime
 
-Focus Areas for Set-Up Changes:
-1. Center of Gravity and Corner Balance
-# Ride Height - low as possible front and rear with base suspension settings
+# Focus Areas for Set-Up Changes:
+
+#### Center of Gravity and Corner Balance
+- Ride Height - low as possible front and rear with base suspension settings
     - consider adjustments to suspension geometry, rake, and weight transfers
 
 2. Tire Patch and Tire Temp
