@@ -3,9 +3,7 @@ Finding a setup that is fast, predictable and instills driver confidence is a mu
 Setup is not one-size-fits all.  It depends on track type, track surface, car, tire, weather condition, and not least of all, driving style and experience.  Finding the right setup for the track, car, conditions and driving style is continuous search of trial-and-error.  Having a strategy, or playbook, that guides you through the setup process is essential.  ....  . Below is a strategic and data-driven playbook that makes finding the right set-up efficient and reproducible. 
 
 # Top Priorities
-- Priority #1 - Tire patch and Tire temperature are king
-- Priority #2 - Consistently (within 0.5s).  If you're not in this range don't mess with setup
-- Priority #3 - Change one thing at a time
+
 
 # Stay Disciplined
 - Take a scientific approach (experiment, measure, record, decide)
