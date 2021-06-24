@@ -10,11 +10,7 @@ This repo is focused on the basics of PCA SimRacing with iRacing, and goes deep 
   - https://www.iracing.com/
   - https://ir-core-sites.iracing.com/members/pdfs/101101.01_User_Guide.pdf
   - https://d3bxz2vegbjddt.cloudfront.net/members/pdfs/FIRST_Sporting_Code_v2014.12.17.01.pdf
-  
-### Other Useful Links
-  - Good Set of reference material and insights from [EdRacing](http://www.edracing.com/edr/)
-  - YouTube Channels:
-    - TBD
+
 
 ### Important PCA SimRacing Links
   - How to get started, all the information below can be found at https://pcasimracing.com/
@@ -56,7 +52,11 @@ This repo is focused on the basics of PCA SimRacing with iRacing, and goes deep 
   - Process iRacing.ibt files with [telemetry/process-ibt.py](https://github.com/glynnsc/pca-sim-racing/blob/main/telemetry/process-ibt.py) - telemetry data is written to .ibt files by keyboard `Alt-L` - ibt files contain more data including track GPS Latitutude and Longitude coordinates which are required for track map visuals and positional comparisons.
   - Automated data pipeline in AWS using S3, Glue Job, Glue Crawler and Athena.  The iRacing.ibt files can be uploaded to an S3 bucket, processed by [telemetry/proccess-ibt-aws-glue.py](https://github.com/glynnsc/pca-sim-racing/blob/main/telemetry/proccess-ibt-aws-glue.py) and made available for interactive analysis via Athena SQL.
   - ETL Gist TBD: Details of S3 event trigger, Glue Crawler and ETL job.
-  
+
+### Setup Configuration Analysis
+- It is essential analyze telemetry data in the context of various track conditions and a multitude of setup tuning options and parameters.  However, there is not currently a straightforward way to obtain the various setup parameters and associate the setup with a seesion's telemetry data.
+- Use the [setup_detail_flatten.py](https://github.com/glynnsc/pca-sim-racing/blob/main/telemetry/setup_detail_flatten.py) script to automatically parse out the setup configuration details and write output to a two-column csv file.
+
 ### Analysis
   - Consider [Virtual Race School](https://virtualracingschool.com/) for data analysis
   - Session Telemetry Analysis Jupyter Notebook [iracing-telemetry-methods-dev1](https://github.com/glynnsc/pca-sim-racing/blob/main/telemetry/iracing-telemetry-methods-dev1.ipynb)
