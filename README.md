@@ -55,7 +55,7 @@ This repo is focused on the basics of PCA SimRacing with iRacing, and goes deep 
 
 ### Setup Configuration Analysis
 - It is essential analyze telemetry data in the context of various track conditions and a multitude of setup tuning options and parameters.  However, there is not currently a straightforward way to obtain the various setup parameters and associate the setup with a seesion's telemetry data.
-- Use the [setup_detail_flatten.py](https://github.com/glynnsc/pca-sim-racing/blob/main/telemetry/setup_detail_flatten.py) script to automatically parse out the setup configuration details and write output to a two-column csv file.
+- Use the [parse_setup_details.py](https://github.com/glynnsc/pca-sim-racing/blob/main/telemetry/parse_setup_details.py) script to automatically parse out the setup configuration details and write output to a two-column csv file.
 
 ### Analysis
   - Consider [Virtual Race School](https://virtualracingschool.com/) for data analysis
