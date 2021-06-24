@@ -4,6 +4,13 @@ import csv
 import time
 import irsdk
 from itertools import chain, starmap
+from datetime import datetime
+
+# datetime object containing current date and time
+now = datetime.now()
+# dd-mm-YY H:M:S
+datetime_string = now.strftime("%d-%m-%Y %H:%M:%S")
+print("date and time =", datetime_string)
 
 # iRacing needs to running and a server-session should be active before running this program
 ir = irsdk.IRSDK()
@@ -56,20 +63,34 @@ car_setup = ir['CarSetup']
 # remove beginning and ending single quotes if needed
 # to comply with standard json
 
-# fiepath
+# if reading from a previously written setup.json file
+# provide filepath
 #json_file = '/path/to/setup_detail.json'
-#csv_file = '/path/to/setup_detail.csv'
+
+# csv output file
+# still need to come up with and automated and robust convention for unique and meaningful names for setups
+# currently not clear how to get the actual name of the setup as seen in iRacing Garage
+# consider using combination of timestamps and script cli args
+
+# combine filename with datetime_string variable from above
+# something like this (iRacing is Windows only so path should reflect Windows style:
+filepath = /Users/name/folder/
+setup_name = 'active' # default, should be something like - rsr_spa_R1
+#setup_detail_csv_filename = f"{filepath}/{setup_name}_setup_{datetime_string}.csv"
+
+# hard-coded version as needed
+#setup_detail_csv_filename = '/path/to/setup_detail.csv'
 
 # read file
-with open(json_file, 'r') as myfile:
-    content = myfile.read()
+#with open(json_file, 'r') as myfile:
+#    json_content = myfile.read()
 
-content = content.replace("'","\"")
+# json_content = json_content.replace("'","\"")
 
-# parse file
-data = json.loads(content)
+# parse file if using file based approach
+# car_setup = json.loads(json_content)
 
-df = pd.Series(flatten_json_iterative_solution(data)).to_frame()
+df = pd.Series(flatten_json_iterative_solution(car_setup)).to_frame()
 # print(df)
-df.to_csv(csv_file, index=True)
+df.to_csv(setup_detail_csv_filename, index=True)
 ####
