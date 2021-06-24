@@ -52,13 +52,13 @@ def flatten_json_iterative_solution(dictionary):
 
 # get CarSetUp
 # a setup should be applied prior to making this function call
-car_setup = ir['CarSetup']
-    if car_setup:
-	setup = json.dumps(ir['CarSetup']) # creates a python dict
+raw_car_setup = ir['CarSetup']
+    if raw_car_setup:
+	car_setup = json.dumps(raw_car_setup) # creates a python dict
         car_setup_tick = ir.get_session_info_update_by_key('CarSetup')
         if car_setup_tick != state.last_car_setup_tick:
             state.last_car_setup_tick = car_setup_tick
-            print('car setup update count:', car_setup['UpdateCount'])
+            print('car setup update count:', raw_car_setup['UpdateCount'])
 
 # remove beginning and ending single quotes if needed
 # to comply with standard json
