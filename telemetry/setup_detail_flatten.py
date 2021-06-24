@@ -1,8 +1,15 @@
 import json
 import pandas as pd
-
+import csv
+import time
+import irsdk
 from itertools import chain, starmap
 
+# iRacing needs to running and a server-session should be active before running this program
+ir = irsdk.IRSDK()
+ir.startup()
+
+# instantiate the method for parsing the nested json setup configuration details
 def flatten_json_iterative_solution(dictionary):
     """Flatten a nested json file"""
 
@@ -35,6 +42,17 @@ def flatten_json_iterative_solution(dictionary):
 
     return dictionary
     
+
+# get CarSetUp
+# a setup should be applied prior to making this function call
+car_setup = ir['CarSetup']
+    if car_setup:
+	setup = json.dumps(ir['CarSetup']) # creates a python dict
+        car_setup_tick = ir.get_session_info_update_by_key('CarSetup')
+        if car_setup_tick != state.last_car_setup_tick:
+            state.last_car_setup_tick = car_setup_tick
+            print('car setup update count:', car_setup['UpdateCount'])
+
 # remove beginning and ending single quotes if needed
 # to comply with standard json
 
