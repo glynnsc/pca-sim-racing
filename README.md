@@ -23,6 +23,7 @@ This repo is focused on the basics of PCA SimRacing with iRacing, and goes deep 
   - RSeat RSEAT N1 Black/White
   - RSeat N1 Keyboard/Mouse tray Upgrade kit White
   - Logitech - G923 Racing Wheel and Pedals, FFB Strength 2.2Nm
+    - Aug-2021 Pedal Upgrade: [Heusinkveld Ultimate+](https://heusinkveld.com/shop/sim-pedals/sim-pedals-ultimate-2/)
   - Headset - [SteelSeries Actis-7 White](https://steelseries.com/gaming-headsets/arctis-7?color=white)
   - Lenovo Legion Tower 5 - Intel Core i7-10700F (2.90 GHz) - 16GB DDR4 - 1TB HDD + 256GB SSD - NVIDIA GeForce RTX 2060 6 GB GDDR6 - Windows 10 Home
   - Oculus Rift S - [Setup Guide](https://riftinfo.com/best-iracing-and-oculus-rift-settings-updated)
